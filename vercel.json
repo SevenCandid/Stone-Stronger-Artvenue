@@ -30,7 +30,7 @@
       ]
     },
     {
-      "source": "/(.*\\.(css|js|jpg|jpeg|png|svg|webp|woff|woff2|gif))",
+      "source": "/:path*.(css|js|jpg|jpeg|png|svg|webp|woff|woff2|gif|ico)",
       "headers": [
         {
           "key": "Cache-Control",
