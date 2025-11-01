@@ -1,16 +1,10 @@
 {
   "version": 2,
   "name": "stone-stronger-artvenue",
-  "builds": [
+  "rewrites": [
     {
-      "src": "index.html",
-      "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ],
   "headers": [
@@ -36,7 +30,7 @@
       ]
     },
     {
-      "source": "/(.*\\.(css|js|jpg|png|svg|webp|woff|woff2))",
+      "source": "/(.*\\.(css|js|jpg|jpeg|png|svg|webp|woff|woff2|gif))",
       "headers": [
         {
           "key": "Cache-Control",
