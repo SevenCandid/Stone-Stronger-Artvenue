@@ -1,0 +1,309 @@
+/* Admin Panel Custom Styles */
+
+:root {
+    --primary: #FF6F61;
+    --secondary: #2C3E50;
+    --accent: #FFD700;
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Sidebar Animations */
+#sidebar {
+    transition: transform 0.3s ease-in-out;
+}
+
+#sidebar.hidden-mobile {
+    transform: translateX(-100%);
+}
+
+@media (min-width: 1024px) {
+    #sidebar.hidden-mobile {
+        transform: translateX(0);
+    }
+}
+
+/* Navigation Items */
+.nav-item {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-item.active {
+    background-color: rgba(255, 111, 97, 0.1);
+    color: var(--primary);
+}
+
+.nav-item.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 70%;
+    background-color: var(--primary);
+    border-radius: 0 4px 4px 0;
+}
+
+.dark .nav-item.active {
+    background-color: rgba(255, 111, 97, 0.15);
+}
+
+/* Stats Cards */
+.stat-card {
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Styles */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-table th {
+    background-color: #f9fafb;
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 14px;
+    color: #374151;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.dark .admin-table th {
+    background-color: #1f2937;
+    color: #f9fafb;
+    border-bottom-color: #374151;
+}
+
+.admin-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.dark .admin-table td {
+    border-bottom-color: #374151;
+}
+
+.admin-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.admin-table tbody tr:hover {
+    background-color: #f9fafb;
+}
+
+.dark .admin-table tbody tr:hover {
+    background-color: #1f2937;
+}
+
+/* Status Badges */
+.status-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status-pending {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.status-processing {
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+
+.status-completed {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.status-cancelled {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+.dark .status-pending {
+    background-color: rgba(254, 243, 199, 0.2);
+    color: #fcd34d;
+}
+
+.dark .status-processing {
+    background-color: rgba(219, 234, 254, 0.2);
+    color: #60a5fa;
+}
+
+.dark .status-completed {
+    background-color: rgba(209, 250, 229, 0.2);
+    color: #34d399;
+}
+
+.dark .status-cancelled {
+    background-color: rgba(254, 226, 226, 0.2);
+    color: #f87171;
+}
+
+/* Action Buttons */
+.action-btn {
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.action-btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-view {
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+
+.btn-edit {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.btn-delete {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+.dark .btn-view {
+    background-color: rgba(219, 234, 254, 0.2);
+    color: #60a5fa;
+}
+
+.dark .btn-edit {
+    background-color: rgba(254, 243, 199, 0.2);
+    color: #fcd34d;
+}
+
+.dark .btn-delete {
+    background-color: rgba(254, 226, 226, 0.2);
+    color: #f87171;
+}
+
+/* Charts */
+.chart-container {
+    position: relative;
+    height: 300px;
+    margin: 20px 0;
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: slideIn 0.3s ease-out;
+}
+
+/* Loading Spinner */
+.spinner {
+    border: 3px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top-color: var(--primary);
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Modal Overlay */
+.modal-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+}
+
+/* Form Inputs */
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(255, 111, 97, 0.1);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark ::-webkit-scrollbar-track {
+    background: #1f2937;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #e65d51;
+}
+
+/* Responsive Tables */
+@media (max-width: 768px) {
+    .admin-table {
+        font-size: 14px;
+    }
+    
+    .admin-table th,
+    .admin-table td {
+        padding: 8px 12px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    #sidebar,
+    header {
+        display: none;
+    }
+    
+    main {
+        margin-left: 0;
+    }
+}
+
+
+
+
+

@@ -1,0 +1,16 @@
+# Robots.txt for Stone Stronger Artvenue
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://yourwebsite.com/sitemap.xml
+
+# Disallow specific paths (if needed)
+# Disallow: /admin/
+# Disallow: /private/
+
+
+
+
+

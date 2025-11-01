@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="Stone Stronger Artvenue - Custom printing services for t-shirts, mugs, jerseys, and more. Nationwide delivery with quality guaranteed.">
+    <meta name="keywords" content="custom printing, custom t-shirts, custom mugs, personalized gifts, Stone Stronger Artvenue">
+    <meta name="author" content="Stone Stronger Artvenue">
+    <title>Stone Stronger Artvenue | Custom Printing Services</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <link rel="apple-touch-icon" href="img/logo.png">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FFD700',
+                        secondary: '#2C3E50',
+                        accent: '#FFD700',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 overflow-x-hidden">
+    
+    <!-- Navigation -->
+    <nav>
+        <div class="container mx-auto">
+            <div class="nav-wrapper">
+                <!-- Logo -->
+                <div class="logo">
+                    <img src="img/logo.png" alt="Stone Stronger Artvenue Logo">
+                    <span>Stone Stronger Artvenue</span>
+                </div>
+                
+                <!-- Desktop Navigation Links -->
+                <div class="nav-links">
+                    <a href="#home" class="nav-link text-primary">Home</a>
+                    <a href="#about" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary">About</a>
+                    <a href="#products" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary">Products</a>
+                    <a href="#portfolio" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary">Portfolio</a>
+                    <a href="#contact" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary">Contact</a>
+                </div>
+                
+                <!-- Desktop Buttons -->
+                <div class="nav-buttons">
+                    <button id="track-order-btn-desktop" class="border border-primary text-primary hover:bg-primary hover:text-white font-semibold px-4 py-2 rounded-full transition-all duration-300">
+                        Track Order
+                    </button>
+                    <button id="get-quote-btn-desktop" class="bg-primary hover:bg-primary/90 text-white font-semibold px-6 py-2 rounded-full transition-all duration-300">
+                        Get Quote
+                    </button>
+                </div>
+                
+                <!-- Mobile Controls -->
+                <div class="mobile-controls">
+                    <button id="theme-toggle" class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors">
+                        <svg id="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden dark:block">
+                            <circle cx="12" cy="12" r="4"></circle>
+                            <path d="M12 2v2"></path>
+                            <path d="M12 20v2"></path>
+                            <path d="m4.93 4.93 1.41 1.41"></path>
+                            <path d="m17.66 17.66 1.41 1.41"></path>
+                            <path d="M2 12h2"></path>
+                            <path d="M20 12h2"></path>
+                            <path d="m6.34 17.66-1.41 1.41"></path>
+                            <path d="m19.07 4.93-1.41 1.41"></path>
+                        </svg>
+                        <svg id="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="block dark:hidden">
+                            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+                        </svg>
+                    </button>
+                    <button id="mobile-menu-toggle" class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="4" x2="20" y1="12" y2="12"></line>
+                            <line x1="4" x2="20" y1="6" y2="6"></line>
+                            <line x1="4" x2="20" y1="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu">
+        <div class="mobile-menu-content">
+            <a href="#home" class="mobile-menu-link text-primary font-medium">Home</a>
+            <a href="#about" class="mobile-menu-link text-gray-700 dark:text-gray-300 hover:text-primary">About</a>
+            <a href="#products" class="mobile-menu-link text-gray-700 dark:text-gray-300 hover:text-primary">Products</a>
+            <a href="#portfolio" class="mobile-menu-link text-gray-700 dark:text-gray-300 hover:text-primary">Portfolio</a>
+            <a href="#contact" class="mobile-menu-link text-gray-700 dark:text-gray-300 hover:text-primary">Contact</a>
+            <button id="track-order-btn-mobile" class="mobile-menu-link w-full border border-primary text-primary hover:bg-primary hover:text-white font-semibold px-4 py-3 rounded-full transition-all duration-300 text-left">
+                Track Order
+            </button>
+            <button id="get-quote-btn-mobile" class="mobile-menu-link w-full bg-primary hover:bg-primary/90 text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 text-left">
+                Get Quote
+            </button>
+        </div>
+    </div>
+    
+    <!-- Hero Section -->
+    <section id="home" class="relative overflow-hidden" style="margin-top: 64px;">
+        <div class="hero-slider h-full relative">
+            <!-- Slide 1 -->
+            <div class="slide absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000" style="background-image: url('img/frame_1.jpg');">
+                <div class="hero-overlay absolute inset-0"></div>
+                <div class="flex items-center justify-center h-full relative z-10">
+                    <div class="text-center text-white px-4 hero-text-container">
+                        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-8xl xl:text-9xl font-bold mb-4 sm:mb-6 animate-slide-up text-shadow-strong">Stone Stronger Artvenue</h1>
+                        <div class="text-base sm:text-lg md:text-2xl lg:text-4xl xl:text-5xl mb-6 sm:mb-8 h-7 sm:h-9 md:h-12 lg:h-16 flex items-center justify-center flex-wrap gap-1 sm:gap-0 text-shadow-strong px-2">
+                            <span class="mr-1 sm:mr-2 whitespace-nowrap flex-shrink-0">Custom Prints for</span>
+                            <span class="rotating-text inline-block" data-texts='["Every Occasion", "Your Dreams", "Special Events", "Unique Ideas"]'></span>
+                        </div>
+                        <button class="bg-primary hover:bg-primary/90 text-white font-semibold py-2 px-4 sm:py-3 sm:px-8 text-sm sm:text-base rounded-full transition-all duration-300 transform hover:scale-105 text-shadow-strong">Explore Products</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="slide active absolute inset-0 bg-cover bg-center transition-opacity duration-1000" style="background-image: url('img/s5.jpg');">
+                <div class="hero-overlay absolute inset-0"></div>
+                <div class="flex items-center justify-center h-full relative z-10">
+                    <div class="text-center text-white px-4 hero-text-container">
+                        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-8xl xl:text-9xl font-bold mb-4 sm:mb-6 text-shadow-strong">Stone <span style="color: yellow;">Stronger</span> Artvenue</h1>
+                        <div class="text-base sm:text-lg md:text-2xl lg:text-4xl xl:text-5xl mb-6 sm:mb-8 h-7 sm:h-9 md:h-12 lg:h-16 flex items-center justify-center flex-wrap gap-1 sm:gap-0 text-shadow-strong px-2">
+                            <span class="mr-1 sm:mr-2 whitespace-nowrap flex-shrink-0">Design Your</span>
+                            <span class="rotating-text inline-block" data-texts='["Own Mug", "Custom Shirt", "Personalized Gift", "Brand Logo"]'></span>
+                            <span class="ml-1 sm:ml-2 whitespace-nowrap flex-shrink-0">Today</span>
+                        </div>
+                        <button class="bg-primary hover:bg-primary/90 text-white font-semibold py-2 px-4 sm:py-3 sm:px-8 text-sm sm:text-base rounded-full transition-all duration-300 transform hover:scale-105 text-shadow-strong">Start Designing</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 3 -->
+            <div class="slide absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000" style="background-image: url('img/39.jpg');">
+                <div class="hero-overlay absolute inset-0"></div>
+                <div class="flex items-center justify-center h-full relative z-10">
+                    <div class="text-center text-white px-4 hero-text-container">
+                        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-8xl xl:text-9xl font-bold mb-4 sm:mb-6 text-shadow-strong">Stone <span style="color: yellow;">Stronger</span> Artvenue</h1>
+                        <div class="text-base sm:text-lg md:text-2xl lg:text-4xl xl:text-5xl mb-6 sm:mb-8 h-7 sm:h-9 md:h-12 lg:h-16 flex items-center justify-center flex-wrap gap-1 sm:gap-0 text-shadow-strong px-2">
+                            <span class="mr-1 sm:mr-2 whitespace-nowrap flex-shrink-0">Nationwide Delivery,</span>
+                            <span class="rotating-text inline-block" data-texts='["Quality Guaranteed", "Fast Shipping", "Premium Quality", "Satisfaction Assured"]'></span>
+                        </div>
+                        <button class="bg-primary hover:bg-primary/90 text-white font-semibold py-2 px-4 sm:py-3 sm:px-8 text-sm sm:text-base rounded-full transition-all duration-300 transform hover:scale-105 text-shadow-strong">Get Quote</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slider Dots -->
+            <div class="slider-dots-container absolute bottom-4 sm:bottom-8 left-0 right-0 flex items-center justify-center space-x-1 sm:space-x-1.5 z-10">
+                <button class="slider-dot w-1 h-1 rounded-full transition-all bg-white" data-slide="0"></button>
+                <button class="slider-dot w-1 h-1 rounded-full transition-all bg-white/50 hover:bg-white" data-slide="1"></button>
+                <button class="slider-dot w-1 h-1 rounded-full transition-all bg-white/50 hover:bg-white" data-slide="2"></button>
+            </div>
+            
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-4 sm:bottom-8 right-4 sm:right-8 text-white animate-bounce hidden sm:block">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m6 9 6 6 6-6"></path>
+                </svg>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="py-12 sm:py-16 md:py-20 bg-white dark:bg-gray-900">
+        <div class="container mx-auto px-3 sm:px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center">
+                    <div>
+                        <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">About Stone Stronger Artvenue</h2>
+                        <p class="text-lg text-gray-600 dark:text-gray-400 mb-6">
+                            We are a passionate team of designers and printing professionals dedicated to bringing your creative visions to life. With years of experience in custom printing, we pride ourselves on delivering exceptional quality and service to customers nationwide.
+                        </p>
+                        <p class="text-lg text-gray-600 dark:text-gray-400 mb-8">
+                            From small personal projects to large corporate orders, we treat every customer with the same level of care and attention to detail. Our state-of-the-art printing technology ensures vibrant colors, durable results, and fast turnaround times.
+                        </p>
+                        
+                        <!-- Features Grid -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="flex items-start space-x-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary text-xl mt-1 flex-shrink-0">
+                                    <circle cx="13.5" cy="6.5" r=".5" fill="currentColor"></circle>
+                                    <circle cx="17.5" cy="10.5" r=".5" fill="currentColor"></circle>
+                                    <circle cx="8.5" cy="7.5" r=".5" fill="currentColor"></circle>
+                                    <circle cx="6.5" cy="12.5" r=".5" fill="currentColor"></circle>
+                                    <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"></path>
+                                </svg>
+                                <div>
+                                    <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Premium Quality</h3>
+                                    <p class="text-gray-600 dark:text-gray-400">Industry-leading materials and printing technology</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary text-xl mt-1 flex-shrink-0">
+                                    <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"></path>
+                                    <path d="m9 12 2 2 4-4"></path>
+                                </svg>
+                                <div>
+                                    <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Fast Turnaround</h3>
+                                    <p class="text-gray-600 dark:text-gray-400">Quick production and nationwide shipping</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary text-xl mt-1 flex-shrink-0">
+                                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                                <div>
+                                    <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Expert Support</h3>
+                                    <p class="text-gray-600 dark:text-gray-400">Dedicated team to help with your projects</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary text-xl mt-1 flex-shrink-0">
+                                    <path d="M20 6 9 17l-5-5"></path>
+                                </svg>
+                                <div>
+                                    <h3 class="font-semibold text-gray-900 dark:text-white mb-2">100% Satisfaction</h3>
+                                    <p class="text-gray-600 dark:text-gray-400">We guarantee you'll love the final product</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="relative overflow-hidden">
+                        <img src="img/s24.jpg" alt="Custom printing workspace" class="rounded-lg shadow-2xl">
+                        <div class="absolute bottom-0 right-0 bg-primary text-white p-4 sm:p-6 rounded-lg shadow-xl">
+                            <div class="text-4xl font-bold">5+</div>
+                            <div class="text-sm">Years of Excellence</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Products Section -->
+    <section id="products" class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">Our Products</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-400">Custom printing solutions for every need</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+                <!-- Product Card 1 -->
+                <div class="product-card bg-white dark:bg-gray-900 shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <img src="img/t_shirt_2.jpg" alt="Custom T-Shirts" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Custom T-Shirts</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">High-quality custom t-shirts with vibrant prints. Perfect for events, teams, and personal style.</p>
+                        <button class="order-now-btn bg-primary hover:bg-primary/90 text-white font-semibold py-2 px-4 rounded-lg transition-colors w-full" data-product="t-shirts">Order Now</button>
+                    </div>
+                </div>
+                
+                <!-- Product Card 2 -->
+                <div class="product-card bg-white dark:bg-gray-900 shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <img src="img/mug_1.jpg" alt="Custom Mugs" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Custom Mugs</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">Personalized ceramic mugs with your design. Great for gifts, branding, and daily use.</p>
+                        <button class="order-now-btn bg-primary hover:bg-primary/90 text-white font-semibold py-2 px-4 rounded-lg transition-colors w-full" data-product="mugs">Order Now</button>
+                    </div>
+                </div>
+                
+                <!-- Product Card 3 -->
+                <div class="product-card bg-white dark:bg-gray-900 shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <img src="img/jersey_2.jpg" alt="Custom Jerseys" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Custom Jerseys</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">Professional sports jerseys with custom numbers and names. Built for performance and style.</p>
+                        <button class="order-now-btn bg-primary hover:bg-primary/90 text-white font-semibold py-2 px-4 rounded-lg transition-colors w-full" data-product="jerseys">Order Now</button>
+                    </div>
+                </div>
+                
+                <!-- Product Card 4 -->
+                <div class="product-card bg-white dark:bg-gray-900 shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <img src="img/cap_1.jpg" alt="Custom Caps" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Custom Caps</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">Stylish custom caps and hats with embroidery or printed designs. Stand out from the crowd.</p>
+                        <button class="order-now-btn bg-primary hover:bg-primary/90 text-white font-semibold py-2 px-4 rounded-lg transition-colors w-full" data-product="caps">Order Now</button>
+                    </div>
+                </div>
+                
+                <!-- Product Card 5 -->
+                <div class="product-card bg-white dark:bg-gray-900 shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <img src="img/wedding.jpg" alt="Picture Frames" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Picture Frames</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">Beautiful custom picture frames with personalized engravings. Preserve your memories in style.</p>
+                        <button class="order-now-btn bg-primary hover:bg-primary/90 text-white font-semibold py-2 px-4 rounded-lg transition-colors w-full" data-product="frames">Order Now</button>
+                    </div>
+                </div>
+                
+                <!-- Product Card 6 -->
+                <div class="product-card bg-white dark:bg-gray-900 shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <img src="img/name_tags_1.jpg" alt="Name Tags" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Name Tags</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">Professional plastic name tags for events, conferences, and businesses. Durable and customizable.</p>
+                        <button class="order-now-btn bg-primary hover:bg-primary/90 text-white font-semibold py-2 px-4 rounded-lg transition-colors w-full" data-product="name-tags">Order Now</button>
+                    </div>
+                </div>
+                
+                <!-- Product Card 7 -->
+                <div class="product-card bg-white dark:bg-gray-900 shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <img src="img/w_bottles.jpg" alt="Water Bottles" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Water Bottles</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">Eco-friendly custom water bottles with your logo or design. Perfect for corporate gifts and events.</p>
+                        <button class="order-now-btn bg-primary hover:bg-primary/90 text-white font-semibold py-2 px-4 rounded-lg transition-colors w-full" data-product="water-bottles">Order Now</button>
+                    </div>
+                </div>
+                
+                <!-- More Products Card -->
+                <div class="bg-gradient-to-br from-primary to-yellow-500 text-white shadow-lg rounded-lg overflow-hidden">
+                    <div class="p-6 h-full flex items-center justify-center text-center">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-auto mb-4">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M8 12h8"></path>
+                                <path d="M12 8v8"></path>
+                            </svg>
+                            <h3 class="text-xl font-semibold mb-2">More Products</h3>
+                            <p class="mb-4">Looking for something specific? We offer many more custom printing options!</p>
+                            <button class="bg-white text-primary hover:bg-gray-100 font-semibold py-2 px-4 rounded-lg transition-colors">Contact Us</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-12 sm:py-16 md:py-20 bg-white dark:bg-gray-900">
+        <div class="container mx-auto px-3 sm:px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">Our Portfolio</h2>
+                <p class="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-400">Showcasing our best custom printing work</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+                <!-- Portfolio Item 1 -->
+                <div class="gallery-item bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-105">
+                    <img src="img/t_shirt_1.jpg" alt="Custom Band T-Shirts" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg text-gray-900 dark:text-white">Custom Band T-Shirts</h3>
+                        <p class="text-gray-600 dark:text-gray-400">Unique designs for local music artists</p>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 2 -->
+                <div class="gallery-item bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-105">
+                    <img src="img/general.jpg" alt="Corporate Mugs" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg text-gray-900 dark:text-white">Corporate Mugs</h3>
+                        <p class="text-gray-600 dark:text-gray-400">Professional branding for businesses</p>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 3 -->
+                <div class="gallery-item bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-105">
+                    <img src="img/jerseys_2.jpg" alt="Team Jerseys" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg text-gray-900 dark:text-white">Team Jerseys</h3>
+                        <p class="text-gray-600 dark:text-gray-400">Professional sports team customization</p>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 4 -->
+                <div class="gallery-item bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-105">
+                    <img src="img/wedding_2.jpg" alt="Wedding Frames" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg text-gray-900 dark:text-white">Wedding Frames</h3>
+                        <p class="text-gray-600 dark:text-gray-400">Personalized wedding gift frames</p>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 5 -->
+                <div class="gallery-item bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-105">
+                    <img src="img/tag.jpg" alt="Event Name Tags" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg text-gray-900 dark:text-white">Event Name Tags</h3>
+                        <p class="text-gray-600 dark:text-gray-400">Professional conference materials</p>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 6 -->
+                <div class="gallery-item bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-105">
+                    <img src="img/fit_bootles.jpg" alt="Fitness Bottles" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg text-gray-900 dark:text-white">Fitness Bottles</h3>
+                        <p class="text-gray-600 dark:text-gray-400">Custom gym and fitness branding</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="bg-gray-900 dark:bg-white hover:bg-gray-800 dark:hover:bg-gray-100 text-white dark:text-gray-900 font-semibold py-3 px-8 rounded-full transition-colors">View More Work</button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="py-12 sm:py-16 md:py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="container mx-auto px-3 sm:px-4">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">What Our Clients Say</h2>
+                <p class="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-400">Hear from our satisfied customers about their experience</p>
+            </div>
+            
+            <div class="max-w-5xl mx-auto">
+                <div class="testimonial-slider overflow-hidden">
+                    <div class="testimonial-wrapper" id="testimonial-slider-content">
+                        <!-- Testimonial 1 -->
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <img src="img/t_shirt_1.jpg" alt="Seven" class="testimonial-image">
+                                <div class="testimonial-text">
+                                    <div class="stars mb-3">
+                                        <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                        <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                        <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                        <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                        <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                    </div>
+                                    <p class="testimonial-quote">"Stone Stronger Artvenue exceeded our expectations! They delivered 500 custom t-shirts for our corporate event with perfect quality and on time. The team was professional and responsive throughout the entire process."</p>
+                                    <div class="testimonial-author">
+                                        <h4 class="author-name">Seven</h4>
+                                        <p class="author-title">Event Coordinator at Bright Events LLC</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Testimonial 2 -->
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <img src="img/jerseys_2.jpg" alt="Candid" class="testimonial-image">
+                                <div class="testimonial-text">
+                                    <div class="stars mb-3">
+                                        <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                        <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                        <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                        <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                        <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                    </div>
+                                    <p class="testimonial-quote">"Amazing work on our custom jerseys! The quality is outstanding and the designs came out exactly as we envisioned. Our team looks professional and feels confident. Highly recommend their services!"</p>
+                                    <div class="testimonial-author">
+                                        <h4 class="author-name">Candid</h4>
+                                        <p class="author-title">Team Manager at Warriors Basketball Club</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Testimonial 3 -->
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <img src="img/s19.jpg" alt="Frank" class="testimonial-image">
+                                <div class="testimonial-text">
+                                    <div class="stars mb-3">
+                                        <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                        <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                        <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                        <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                        <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                    </div>
+                                    <p class="testimonial-quote">"We needed custom mugs and water bottles for our product launch. Stone Stronger Artvenue delivered exceptional quality products that perfectly represented our brand. The attention to detail was remarkable."</p>
+                                    <div class="testimonial-author">
+                                        <h4 class="author-name">Frank</h4>
+                                        <p class="author-title">Marketing Director at SevenLink Inc.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial Navigation Dots -->
+                <div class="flex justify-center mt-8 space-x-3">
+                    <button class="testimonial-dot w-3 h-3 rounded-full bg-primary" data-testimonial="0"></button>
+                    <button class="testimonial-dot w-3 h-3 rounded-full bg-gray-300 dark:bg-gray-600" data-testimonial="1"></button>
+                    <button class="testimonial-dot w-3 h-3 rounded-full bg-gray-300 dark:bg-gray-600" data-testimonial="2"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-12 sm:py-16 md:py-20 bg-white dark:bg-gray-900">
+        <div class="container mx-auto px-3 sm:px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">Get In Touch</h2>
+                    <p class="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-400">Ready to start your custom printing project? Contact us today!</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-12">
+                    <!-- Contact Form -->
+                    <div>
+                        <form id="contact-form" class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Full Name</label>
+                                <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-800 dark:text-white">
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email Address</label>
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-800 dark:text-white">
+                            </div>
+                            
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-800 dark:text-white">
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Message</label>
+                                <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-800 dark:text-white"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-6 rounded-lg transition-colors">Send Message</button>
+                        </form>
+                    </div>
+                    
+                    <!-- Contact Information -->
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Contact Information</h3>
+                            
+                            <div class="space-y-4">
+                                <div class="flex items-start space-x-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1 flex-shrink-0">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                    </svg>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-900 dark:text-white">Phone</h4>
+                                        <p class="text-gray-600 dark:text-gray-400">(+233) 24-085-1993</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start space-x-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1 flex-shrink-0">
+                                        <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                                    </svg>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-900 dark:text-white">Email</h4>
+                                        <p class="text-gray-600 dark:text-gray-400">info@stonestrongerartvenue.com</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start space-x-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1 flex-shrink-0">
+                                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-900 dark:text-white">Address</h4>
+                                        <p class="text-gray-600 dark:text-gray-400">Ecowas<br>Jaman North, Sampa</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-semibold text-gray-900 dark:text-white mb-4">Business Hours</h4>
+                            <div class="space-y-2 text-gray-600 dark:text-gray-400">
+                                <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                                <p>Saturday: 10:00 AM - 4:00 PM</p>
+                                <p>Sunday: Closed</p>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-semibold text-gray-900 dark:text-white mb-4">Follow Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                                </a>
+                                <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                                </a>
+                                <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <img src="img/logo.png" alt="Stone Stronger Artvenue Logo" class="w-8 h-8 object-contain">
+                        <span class="text-xl font-bold">Stone Stronger Artvenue</span>
+                    </div>
+                    <p class="text-gray-400">Creating custom prints that bring your visions to life.</p>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-primary transition-colors">About</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-primary transition-colors">Products</a></li>
+                        <li><a href="#portfolio" class="text-gray-400 hover:text-primary transition-colors">Portfolio</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Custom T-Shirts</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Custom Mugs</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Custom Jerseys</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Picture Frames</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Name Tags</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold text-base sm:text-lg mb-4">Newsletter</h3>
+                    <p class="text-gray-400 text-sm mb-4">Subscribe to get special offers and updates.</p>
+                    <form class="flex flex-col sm:flex-row gap-2">
+                        <input type="email" placeholder="Your email" class="flex-1 px-3 py-2 text-sm sm:text-base sm:rounded-l-lg rounded-lg sm:rounded-r-none bg-gray-800 border border-gray-700 focus:outline-none focus:border-primary">
+                        <button type="submit" class="bg-primary hover:bg-primary/90 px-4 py-2 text-sm sm:text-base sm:rounded-r-lg rounded-lg sm:rounded-l-none transition-colors whitespace-nowrap">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <div class="flex items-center justify-center space-x-4 mb-4">
+                    <a href="admin/login.html" class="text-sm text-gray-400 hover:text-primary transition-colors">Admin Login</a>
+                    <span class="text-gray-600">•</span>
+                    <a href="#" class="text-sm text-gray-400 hover:text-primary transition-colors">Privacy Policy</a>
+                    <span class="text-gray-600">•</span>
+                    <a href="#" class="text-sm text-gray-400 hover:text-primary transition-colors">Terms of Service</a>
+                </div>
+                <p>&copy; 2025 Stone Stronger Artvenue. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scroll to Top Button -->
+    <button id="scroll-top" class="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 bg-primary hover:bg-primary/90 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 z-50">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m18 15-6-6-6 6"></path>
+        </svg>
+    </button>
+    
+    <!-- Get Quote Modal -->
+    <div id="quote-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white dark:bg-gray-800 rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="sticky top-0 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 p-6 flex justify-between items-center">
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Get a Quote</h2>
+                <button id="close-quote-modal" class="text-gray-500 hover:text-gray-700 dark:hover:text-gray-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="p-6">
+                <form id="quote-form" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="quote-name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Full Name *</label>
+                            <input type="text" id="quote-name" name="name" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-900 dark:text-white">
+                        </div>
+                        <div>
+                            <label for="quote-email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email Address *</label>
+                            <input type="email" id="quote-email" name="email" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-900 dark:text-white">
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="quote-phone" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Phone Number</label>
+                            <input type="tel" id="quote-phone" name="phone" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-900 dark:text-white">
+                        </div>
+                        <div>
+                            <label for="quote-company" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Company Name</label>
+                            <input type="text" id="quote-company" name="company" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-900 dark:text-white">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label for="quote-product" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Product Type *</label>
+                        <select id="quote-product" name="product" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-900 dark:text-white">
+                            <option value="">Select a product...</option>
+                            <option value="t-shirts">Custom T-Shirts</option>
+                            <option value="mugs">Custom Mugs</option>
+                            <option value="jerseys">Custom Jerseys</option>
+                            <option value="caps">Custom Caps</option>
+                            <option value="frames">Picture Frames</option>
+                            <option value="name-tags">Name Tags</option>
+                            <option value="water-bottles">Water Bottles</option>
+                            <option value="other">Other (Please specify in details)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="quote-quantity" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Quantity *</label>
+                            <input type="number" id="quote-quantity" name="quantity" min="1" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-900 dark:text-white" placeholder="e.g., 50">
+                        </div>
+                        <div>
+                            <label for="quote-deadline" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Preferred Deadline</label>
+                            <input type="date" id="quote-deadline" name="deadline" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-900 dark:text-white">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label for="quote-details" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Additional Details *</label>
+                        <textarea id="quote-details" name="details" rows="4" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-900 dark:text-white" placeholder="Please describe your requirements, colors, sizes, design details, etc."></textarea>
+                    </div>
+                    
+                    <div>
+                        <label for="quote-file" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Upload Design (Optional)</label>
+                        <input type="file" id="quote-file" name="file" accept="image/*,.pdf,.ai,.psd" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-900 dark:text-white">
+                        <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Accepted formats: JPG, PNG, PDF, AI, PSD (Max 10MB)</p>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <input type="checkbox" id="quote-terms" name="terms" required class="mt-1 mr-2">
+                        <label for="quote-terms" class="text-sm text-gray-600 dark:text-gray-400">
+                            I agree to the terms and conditions and authorize Stone Stronger Artvenue to contact me regarding this quote request.
+                        </label>
+                    </div>
+                    
+                    <div class="flex gap-4">
+                        <button type="submit" class="flex-1 bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+                            Submit Quote Request
+                        </button>
+                        <button type="button" id="cancel-quote" class="px-6 py-3 border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                            Cancel
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Track Order Modal -->
+    <div id="track-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white dark:bg-gray-800 rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="sticky top-0 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 p-6 flex justify-between items-center">
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Track Your Order</h2>
+                <button id="close-track-modal" class="text-gray-500 hover:text-gray-700 dark:hover:text-gray-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="p-6">
+                <!-- Track Form -->
+                <div id="track-form-container">
+                    <p class="text-gray-600 dark:text-gray-400 mb-6">Enter your order ID and email to track your order status.</p>
+                    <form id="track-form" class="space-y-6">
+                        <div>
+                            <label for="track-order-id" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Order ID *</label>
+                            <input type="text" id="track-order-id" name="orderId" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-900 dark:text-white" placeholder="e.g., SSA-2025-001234">
+                        </div>
+                        
+                        <div>
+                            <label for="track-email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email Address *</label>
+                            <input type="email" id="track-email" name="email" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-900 dark:text-white" placeholder="your@email.com">
+                        </div>
+                        
+                        <div class="flex gap-4">
+                            <button type="submit" class="flex-1 bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+                                Track Order
+                            </button>
+                            <button type="button" id="cancel-track" class="px-6 py-3 border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                                Cancel
+                            </button>
+                        </div>
+                    </form>
+                    
+                    <div class="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+                        <p class="text-sm text-blue-800 dark:text-blue-200">
+                            <strong>Demo Mode:</strong> Try these order IDs: SSA-2025-001234, SSA-2025-005678, SSA-2025-009999
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Track Results (hidden by default) -->
+                <div id="track-results" class="hidden">
+                    <div class="mb-6">
+                        <button id="track-new-order" class="text-primary hover:underline flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+                                <line x1="19" y1="12" x2="5" y2="12"></line>
+                                <polyline points="12 19 5 12 12 5"></polyline>
+                            </svg>
+                            Track Another Order
+                        </button>
+                    </div>
+                    
+                    <div class="bg-gray-50 dark:bg-gray-900 rounded-lg p-6 mb-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Order Details</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Order ID: <span id="result-order-id" class="font-mono text-primary"></span></p>
+                            </div>
+                            <span id="result-status-badge" class="px-3 py-1 rounded-full text-sm font-semibold"></span>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-4 text-sm">
+                            <div>
+                                <p class="text-gray-600 dark:text-gray-400">Product:</p>
+                                <p id="result-product" class="font-semibold text-gray-900 dark:text-white"></p>
+                            </div>
+                            <div>
+                                <p class="text-gray-600 dark:text-gray-400">Quantity:</p>
+                                <p id="result-quantity" class="font-semibold text-gray-900 dark:text-white"></p>
+                            </div>
+                            <div>
+                                <p class="text-gray-600 dark:text-gray-400">Order Date:</p>
+                                <p id="result-date" class="font-semibold text-gray-900 dark:text-white"></p>
+                            </div>
+                            <div>
+                                <p class="text-gray-600 dark:text-gray-400">Expected Delivery:</p>
+                                <p id="result-delivery" class="font-semibold text-gray-900 dark:text-white"></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Progress Timeline -->
+                    <div class="space-y-4">
+                        <h4 class="font-semibold text-gray-900 dark:text-white">Order Progress</h4>
+                        <div id="progress-timeline" class="space-y-4">
+                            <!-- Timeline items will be inserted here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/233240851993" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Chat with us on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" class="whatsapp-icon">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+        <span class="whatsapp-pulse"></span>
+    </a>
+    
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
+
