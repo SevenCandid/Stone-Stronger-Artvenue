@@ -282,12 +282,49 @@ select:focus {
 /* Responsive Tables */
 @media (max-width: 768px) {
     .admin-table {
-        font-size: 14px;
+        font-size: 12px;
     }
     
     .admin-table th,
     .admin-table td {
-        padding: 8px 12px;
+        padding: 8px 10px;
+        white-space: nowrap;
+    }
+    
+    /* Mobile-friendly action buttons */
+    .action-btn {
+        padding: 4px 8px;
+        font-size: 11px;
+        margin: 2px;
+    }
+    
+    /* Stack action buttons on mobile */
+    .admin-table td .flex {
+        flex-direction: column;
+        gap: 4px;
+    }
+    
+    .admin-table td .flex .action-btn {
+        width: 100%;
+    }
+}
+
+/* Mobile Sidebar Overlay */
+@media (max-width: 1023px) {
+    #sidebar.hidden-mobile {
+        transform: translateX(-100%);
+    }
+    
+    /* Overlay when sidebar is open */
+    body.sidebar-open::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z: 40;
     }
 }
 

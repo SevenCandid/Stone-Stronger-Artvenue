@@ -83,12 +83,26 @@ const closeSidebarBtn = document.getElementById('close-sidebar');
 if (toggleSidebarBtn) {
     toggleSidebarBtn.addEventListener('click', () => {
         sidebar.classList.toggle('hidden-mobile');
+        document.body.classList.toggle('sidebar-open');
     });
 }
 
 if (closeSidebarBtn) {
     closeSidebarBtn.addEventListener('click', () => {
         sidebar.classList.add('hidden-mobile');
+        document.body.classList.remove('sidebar-open');
+    });
+}
+
+// Close sidebar when clicking outside on mobile
+if (sidebar) {
+    document.addEventListener('click', (e) => {
+        if (window.innerWidth < 1024) {
+            if (!sidebar.contains(e.target) && !toggleSidebarBtn?.contains(e.target) && !sidebar.classList.contains('hidden-mobile')) {
+                sidebar.classList.add('hidden-mobile');
+                document.body.classList.remove('sidebar-open');
+            }
+        }
     });
 }
 
@@ -140,18 +154,18 @@ const demoContacts = [
 
 const contentSections = {
     dashboard: () => `
-        <div class="space-y-6 fade-in">
+        <div class="space-y-4 sm:space-y-6 fade-in">
             <!-- Stats Cards -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="stat-card bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm border border-gray-200 dark:border-gray-700">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+                <div class="stat-card bg-white dark:bg-gray-800 rounded-lg p-4 sm:p-6 shadow-sm border border-gray-200 dark:border-gray-700">
                     <div class="flex items-center justify-between">
-                        <div>
-                            <p class="text-sm text-gray-600 dark:text-gray-400">Total Orders</p>
-                            <p class="text-3xl font-bold text-gray-900 dark:text-white mt-2">${demoOrders.length}</p>
-                            <p class="text-sm text-green-600 mt-2">↑ 12% from last month</p>
+                        <div class="flex-1 min-w-0">
+                            <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400">Total Orders</p>
+                            <p class="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mt-1 sm:mt-2">${demoOrders.length}</p>
+                            <p class="text-xs sm:text-sm text-green-600 mt-1 sm:mt-2">↑ 12% from last month</p>
                         </div>
-                        <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-600">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-600">
                                 <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"></path>
                             </svg>
                         </div>
@@ -210,10 +224,10 @@ const contentSections = {
             </div>
             
             <!-- Recent Activity -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6">
-                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Recent Orders</h3>
-                    <div class="space-y-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4 sm:p-6">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white mb-3 sm:mb-4">Recent Orders</h3>
+                    <div class="space-y-3 sm:space-y-4">
                         ${demoOrders.slice(0, 5).map(order => `
                             <div class="flex items-center justify-between pb-4 border-b border-gray-200 dark:border-gray-700 last:border-0">
                                 <div>
@@ -229,9 +243,9 @@ const contentSections = {
                     </div>
                 </div>
                 
-                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6">
-                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Recent Quote Requests</h3>
-                    <div class="space-y-4">
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4 sm:p-6">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white mb-3 sm:mb-4">Recent Quote Requests</h3>
+                    <div class="space-y-3 sm:space-y-4">
                         ${demoQuotes.slice(0, 5).map(quote => `
                             <div class="flex items-center justify-between pb-4 border-b border-gray-200 dark:border-gray-700 last:border-0">
                                 <div>
@@ -251,16 +265,16 @@ const contentSections = {
     `,
     
     quotes: () => `
-        <div class="space-y-6 fade-in">
-            <div class="flex items-center justify-between">
-                <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Quote Requests</h3>
-                <button class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors">
+        <div class="space-y-4 sm:space-y-6 fade-in">
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-0">
+                <h3 class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">Quote Requests</h3>
+                <button class="px-3 sm:px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors text-sm sm:text-base w-full sm:w-auto">
                     Export to CSV
                 </button>
             </div>
             
-            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden">
-                <table class="admin-table">
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden overflow-x-auto">
+                <table class="admin-table w-full">
                     <thead>
                         <tr>
                             <th>Quote ID</th>
@@ -302,16 +316,16 @@ const contentSections = {
     `,
     
     orders: () => `
-        <div class="space-y-6 fade-in">
-            <div class="flex items-center justify-between">
-                <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Orders Management</h3>
-                <button class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors">
+        <div class="space-y-4 sm:space-y-6 fade-in">
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-0">
+                <h3 class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">Orders Management</h3>
+                <button class="px-3 sm:px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors text-sm sm:text-base w-full sm:w-auto">
                     Create New Order
                 </button>
             </div>
             
-            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden">
-                <table class="admin-table">
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden overflow-x-auto">
+                <table class="admin-table w-full">
                     <thead>
                         <tr>
                             <th>Order ID</th>
@@ -349,15 +363,15 @@ const contentSections = {
     `,
     
     products: () => `
-        <div class="space-y-6 fade-in">
-            <div class="flex items-center justify-between">
-                <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Products Management</h3>
-                <button class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors">
+        <div class="space-y-4 sm:space-y-6 fade-in">
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-0">
+                <h3 class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">Products Management</h3>
+                <button class="px-3 sm:px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors text-sm sm:text-base w-full sm:w-auto">
                     Add New Product
                 </button>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                 ${demoProducts.map(product => `
                     <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6">
                         <div class="flex items-center justify-between mb-4">
@@ -394,15 +408,15 @@ const contentSections = {
     `,
     
     testimonials: () => `
-        <div class="space-y-6 fade-in">
-            <div class="flex items-center justify-between">
-                <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Testimonials Management</h3>
-                <button class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors">
+        <div class="space-y-4 sm:space-y-6 fade-in">
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-0">
+                <h3 class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">Testimonials Management</h3>
+                <button class="px-3 sm:px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors text-sm sm:text-base w-full sm:w-auto">
                     Add Testimonial
                 </button>
             </div>
             
-            <div class="grid grid-cols-1 gap-6">
+            <div class="grid grid-cols-1 gap-4 sm:gap-6">
                 ${demoTestimonials.map(testimonial => `
                     <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6">
                         <div class="flex items-start space-x-4">
@@ -431,16 +445,16 @@ const contentSections = {
     `,
     
     contacts: () => `
-        <div class="space-y-6 fade-in">
-            <div class="flex items-center justify-between">
-                <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Contact Messages</h3>
-                <button class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors">
+        <div class="space-y-4 sm:space-y-6 fade-in">
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-0">
+                <h3 class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">Contact Messages</h3>
+                <button class="px-3 sm:px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors text-sm sm:text-base w-full sm:w-auto">
                     Mark All as Read
                 </button>
             </div>
             
-            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden">
-                <table class="admin-table">
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden overflow-x-auto">
+                <table class="admin-table w-full">
                     <thead>
                         <tr>
                             <th>Name</th>
@@ -474,10 +488,10 @@ const contentSections = {
     `,
     
     analytics: () => `
-        <div class="space-y-6 fade-in">
-            <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Analytics & Reports</h3>
+        <div class="space-y-4 sm:space-y-6 fade-in">
+            <h3 class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">Analytics & Reports</h3>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                 <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6">
                     <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Conversion Rate</h4>
                     <p class="text-4xl font-bold text-primary mb-2">24.5%</p>
