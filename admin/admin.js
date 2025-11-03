@@ -97,41 +97,41 @@ if (closeSidebarBtn) {
 // ========================================
 
 const demoQuotes = [
-    { id: 'QT-001', name: 'John Doe', email: 'john@example.com', product: 'Custom T-Shirts', quantity: 50, date: '2025-10-25', status: 'pending' },
-    { id: 'QT-002', name: 'Jane Smith', email: 'jane@example.com', product: 'Custom Mugs', quantity: 100, date: '2025-10-24', status: 'processing' },
-    { id: 'QT-003', name: 'Bob Johnson', email: 'bob@example.com', product: 'Custom Jerseys', quantity: 25, date: '2025-10-23', status: 'completed' },
-    { id: 'QT-004', name: 'Alice Brown', email: 'alice@example.com', product: 'Picture Frames', quantity: 75, date: '2025-10-22', status: 'pending' },
-    { id: 'QT-005', name: 'Charlie Wilson', email: 'charlie@example.com', product: 'Water Bottles', quantity: 200, date: '2025-10-21', status: 'processing' },
+    { id: 'QT-001', name: 'Seven Frank', email: 'seven.frank@example.com', product: 'Custom T-Shirts', quantity: 50, date: '2025-10-25', status: 'pending' },
+    { id: 'QT-002', name: 'Candid Asante', email: 'candid.asante@example.com', product: 'Custom Mugs', quantity: 100, date: '2025-10-24', status: 'processing' },
+    { id: 'QT-003', name: 'Stone Mensah', email: 'stone.mensah@example.com', product: 'Custom Jerseys', quantity: 25, date: '2025-10-23', status: 'completed' },
+    { id: 'QT-004', name: 'Frank Owusu', email: 'frank.owusu@example.com', product: 'Picture Frames', quantity: 75, date: '2025-10-22', status: 'pending' },
+    { id: 'QT-005', name: 'Seven Adjei', email: 'seven.adjei@example.com', product: 'Water Bottles', quantity: 200, date: '2025-10-21', status: 'processing' },
 ];
 
 const demoOrders = [
-    { id: 'SSA-2025-001234', customer: 'Sarah Johnson', product: 'Custom T-Shirts', quantity: 50, total: '$1,250', date: '2025-10-15', status: 'in-transit' },
-    { id: 'SSA-2025-005678', customer: 'Mike Chen', product: 'Custom Mugs', quantity: 100, total: '$2,500', date: '2025-10-20', status: 'production' },
-    { id: 'SSA-2025-009999', customer: 'Emily Rodriguez', product: 'Custom Jerseys', quantity: 25, total: '$1,875', date: '2025-10-25', status: 'processing' },
-    { id: 'SSA-2025-001111', customer: 'David Thompson', product: 'Picture Frames', quantity: 30, total: '$900', date: '2025-10-18', status: 'completed' },
-    { id: 'SSA-2025-002222', customer: 'Lisa Anderson', product: 'Name Tags', quantity: 150, total: '$750', date: '2025-10-19', status: 'completed' },
+    { id: 'SSA-2025-001234', customer: 'Seven Frank', product: 'Custom T-Shirts', quantity: 50, total: '₵1,250', date: '2025-10-15', status: 'in-transit' },
+    { id: 'SSA-2025-005678', customer: 'Candid Asante', product: 'Custom Mugs', quantity: 100, total: '₵2,500', date: '2025-10-20', status: 'production' },
+    { id: 'SSA-2025-009999', customer: 'Stone Mensah', product: 'Custom Jerseys', quantity: 25, total: '₵1,875', date: '2025-10-25', status: 'processing' },
+    { id: 'SSA-2025-001111', customer: 'Frank Owusu', product: 'Picture Frames', quantity: 30, total: '₵900', date: '2025-10-18', status: 'completed' },
+    { id: 'SSA-2025-002222', customer: 'Candid Adjei', product: 'Name Tags', quantity: 150, total: '₵750', date: '2025-10-19', status: 'completed' },
 ];
 
 const demoProducts = [
-    { id: 1, name: 'Custom T-Shirts', category: 'Apparel', price: '$25', stock: 'In Stock', featured: true },
-    { id: 2, name: 'Custom Mugs', category: 'Drinkware', price: '$25', stock: 'In Stock', featured: true },
-    { id: 3, name: 'Custom Jerseys', category: 'Apparel', price: '$75', stock: 'In Stock', featured: true },
-    { id: 4, name: 'Custom Caps', category: 'Accessories', price: '$20', stock: 'In Stock', featured: false },
-    { id: 5, name: 'Picture Frames', category: 'Decor', price: '$30', stock: 'In Stock', featured: true },
-    { id: 6, name: 'Name Tags', category: 'Business', price: '$5', stock: 'In Stock', featured: false },
-    { id: 7, name: 'Water Bottles', category: 'Drinkware', price: '$18', stock: 'In Stock', featured: true },
+    { id: 1, name: 'Custom T-Shirts', category: 'Apparel', price: '₵25', stock: 'In Stock', featured: true },
+    { id: 2, name: 'Custom Mugs', category: 'Drinkware', price: '₵25', stock: 'In Stock', featured: true },
+    { id: 3, name: 'Custom Jerseys', category: 'Apparel', price: '₵75', stock: 'In Stock', featured: true },
+    { id: 4, name: 'Custom Caps', category: 'Accessories', price: '₵20', stock: 'In Stock', featured: false },
+    { id: 5, name: 'Picture Frames', category: 'Decor', price: '₵30', stock: 'In Stock', featured: true },
+    { id: 6, name: 'Name Tags', category: 'Business', price: '₵5', stock: 'In Stock', featured: false },
+    { id: 7, name: 'Water Bottles', category: 'Drinkware', price: '₵18', stock: 'In Stock', featured: true },
 ];
 
 const demoTestimonials = [
-    { id: 1, name: 'Sarah Johnson', role: 'Event Coordinator', rating: 5, text: 'Excellent service! Delivered 500 custom t-shirts on time with perfect quality.', image: 'https://i.pravatar.cc/150?img=1' },
-    { id: 2, name: 'Mike Chen', role: 'Team Manager', rating: 5, text: 'Amazing work on our custom jerseys! The quality is outstanding.', image: 'https://i.pravatar.cc/150?img=2' },
-    { id: 3, name: 'Emily Rodriguez', role: 'Marketing Director', rating: 5, text: 'Exceptional quality products that perfectly represented our brand.', image: 'https://i.pravatar.cc/150?img=3' },
+    { id: 1, name: 'Seven Frank', role: 'Event Coordinator', rating: 5, text: 'Excellent service! Delivered 500 custom t-shirts on time with perfect quality.', image: '../img/t_shirt_1.jpg' },
+    { id: 2, name: 'Candid Asante', role: 'Team Manager', rating: 5, text: 'Amazing work on our custom jerseys! The quality is outstanding.', image: '../img/jersey_2.jpg' },
+    { id: 3, name: 'Stone Mensah', role: 'Marketing Director', rating: 5, text: 'Exceptional quality products that perfectly represented our brand.', image: '../img/mug_1.jpg' },
 ];
 
 const demoContacts = [
-    { id: 1, name: 'Mark Wilson', email: 'mark@example.com', subject: 'Bulk Order Inquiry', message: 'Interested in ordering 500 custom t-shirts...', date: '2025-10-28', status: 'new' },
-    { id: 2, name: 'Linda Garcia', email: 'linda@example.com', subject: 'Design Question', message: 'Can you help with custom design for mugs?', date: '2025-10-27', status: 'replied' },
-    { id: 3, name: 'Robert Lee', email: 'robert@example.com', subject: 'Partnership Opportunity', message: 'Would like to discuss partnership options...', date: '2025-10-26', status: 'new' },
+    { id: 1, name: 'Seven Frank', email: 'seven.frank@example.com', subject: 'Bulk Order Inquiry', message: 'Interested in ordering 500 custom t-shirts...', date: '2025-10-28', status: 'new' },
+    { id: 2, name: 'Frank Owusu', email: 'frank.owusu@example.com', subject: 'Design Question', message: 'Can you help with custom design for mugs?', date: '2025-10-27', status: 'replied' },
+    { id: 3, name: 'Stone Mensah', email: 'stone.mensah@example.com', subject: 'Partnership Opportunity', message: 'Would like to discuss partnership options...', date: '2025-10-26', status: 'new' },
 ];
 
 // ========================================
@@ -178,7 +178,7 @@ const contentSections = {
                     <div class="flex items-center justify-between">
                         <div>
                             <p class="text-sm text-gray-600 dark:text-gray-400">Revenue</p>
-                            <p class="text-3xl font-bold text-gray-900 dark:text-white mt-2">$12,450</p>
+                            <p class="text-3xl font-bold text-gray-900 dark:text-white mt-2">₵12,450</p>
                             <p class="text-sm text-green-600 mt-2">↑ 15% from last month</p>
                         </div>
                         <div class="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center">
@@ -406,7 +406,7 @@ const contentSections = {
                 ${demoTestimonials.map(testimonial => `
                     <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6">
                         <div class="flex items-start space-x-4">
-                            <img src="${testimonial.image}" alt="${testimonial.name}" class="w-16 h-16 rounded-full">
+                            <img src="${testimonial.image}" alt="${testimonial.name}" class="w-16 h-16 rounded-full object-cover">
                             <div class="flex-1">
                                 <div class="flex items-center justify-between mb-2">
                                     <div>
@@ -486,7 +486,7 @@ const contentSections = {
                 
                 <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6">
                     <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Avg Order Value</h4>
-                    <p class="text-4xl font-bold text-primary mb-2">$1,485</p>
+                    <p class="text-4xl font-bold text-primary mb-2">₵1,485</p>
                     <p class="text-sm text-green-600">↑ 8.1% from last month</p>
                 </div>
                 
@@ -499,8 +499,48 @@ const contentSections = {
             
             <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6">
                 <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Revenue Chart</h4>
-                <div class="h-64 flex items-center justify-center bg-gray-50 dark:bg-gray-900 rounded-lg">
-                    <p class="text-gray-500 dark:text-gray-400">Chart visualization would go here</p>
+                <div class="h-64 flex flex-col justify-end bg-gray-50 dark:bg-gray-900 rounded-lg p-6">
+                    <div class="flex items-end justify-between h-full gap-2">
+                        <div class="flex flex-col items-center flex-1">
+                            <div class="w-full bg-gradient-to-t from-primary to-primary/60 rounded-t-lg mb-2" style="height: 45%;" title="Jan: ₵8,500"></div>
+                            <span class="text-xs text-gray-500 dark:text-gray-400">Jan</span>
+                        </div>
+                        <div class="flex flex-col items-center flex-1">
+                            <div class="w-full bg-gradient-to-t from-primary to-primary/60 rounded-t-lg mb-2" style="height: 55%;" title="Feb: ₵10,200"></div>
+                            <span class="text-xs text-gray-500 dark:text-gray-400">Feb</span>
+                        </div>
+                        <div class="flex flex-col items-center flex-1">
+                            <div class="w-full bg-gradient-to-t from-primary to-primary/60 rounded-t-lg mb-2" style="height: 65%;" title="Mar: ₵11,800"></div>
+                            <span class="text-xs text-gray-500 dark:text-gray-400">Mar</span>
+                        </div>
+                        <div class="flex flex-col items-center flex-1">
+                            <div class="w-full bg-gradient-to-t from-primary to-primary/60 rounded-t-lg mb-2" style="height: 70%;" title="Apr: ₵12,450"></div>
+                            <span class="text-xs text-gray-500 dark:text-gray-400">Apr</span>
+                        </div>
+                        <div class="flex flex-col items-center flex-1">
+                            <div class="w-full bg-gradient-to-t from-primary to-primary/60 rounded-t-lg mb-2" style="height: 60%;" title="May: ₵10,900"></div>
+                            <span class="text-xs text-gray-500 dark:text-gray-400">May</span>
+                        </div>
+                        <div class="flex flex-col items-center flex-1">
+                            <div class="w-full bg-gradient-to-t from-primary to-primary/60 rounded-t-lg mb-2" style="height: 75%;" title="Jun: ₵13,200"></div>
+                            <span class="text-xs text-gray-500 dark:text-gray-400">Jun</span>
+                        </div>
+                        <div class="flex flex-col items-center flex-1">
+                            <div class="w-full bg-gradient-to-t from-green-500 to-green-400 rounded-t-lg mb-2" style="height: 85%;" title="Jul: ₵14,800"></div>
+                            <span class="text-xs text-gray-500 dark:text-gray-400">Jul</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4 flex items-center justify-between text-sm">
+                    <div class="flex items-center space-x-4">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-3 h-3 bg-primary rounded"></div>
+                            <span class="text-gray-600 dark:text-gray-400">Revenue (₵)</span>
+                        </div>
+                    </div>
+                    <div class="text-gray-600 dark:text-gray-400">
+                        Last 7 months
+                    </div>
                 </div>
             </div>
         </div>
@@ -523,7 +563,7 @@ const contentSections = {
                     </div>
                     <div>
                         <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Contact Phone</label>
-                        <input type="tel" value="+1 (555) 123-4567" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg dark:bg-gray-700 dark:text-white">
+                        <input type="tel" value="+233 54 943 7374" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg dark:bg-gray-700 dark:text-white">
                     </div>
                     <button type="submit" class="px-6 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors">
                         Save Changes
@@ -594,6 +634,9 @@ if (navItems.length > 0 && contentArea) {
 // ========================================
 console.log('%c🎨 Stone Stronger Artvenue Admin Panel', 'color: #FF6F61; font-size: 20px; font-weight: bold;');
 console.log('%cAdmin Panel v1.0 | stonestrongerartvenue.com', 'color: #2C3E50; font-size: 14px;');
+
+
+
 
 
 

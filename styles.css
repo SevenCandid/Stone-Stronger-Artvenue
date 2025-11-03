@@ -997,6 +997,14 @@ button:active {
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
+/* Desktop: Position scroll-to-top button above WhatsApp button */
+@media (min-width: 641px) {
+    #scroll-top {
+        bottom: 90px !important;
+        right: 20px !important;
+    }
+}
+
 /* Loading States */
 .loading {
     pointer-events: none;
