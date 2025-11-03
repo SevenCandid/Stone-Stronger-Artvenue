@@ -3,17 +3,20 @@
 // ========================================
 // Theme Toggle Functionality
 // ========================================
-const themeToggle = document.getElementById('theme-toggle');
+const themeToggles = document.querySelectorAll('#theme-toggle');
 const html = document.documentElement;
 
 // Check for saved theme preference or default to dark
 const currentTheme = localStorage.getItem('theme') || 'dark';
 html.classList.toggle('dark', currentTheme === 'dark');
 
-themeToggle.addEventListener('click', () => {
-    html.classList.toggle('dark');
-    const theme = html.classList.contains('dark') ? 'dark' : 'light';
-    localStorage.setItem('theme', theme);
+// Add event listener to all theme toggle buttons (desktop and mobile)
+themeToggles.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+        html.classList.toggle('dark');
+        const theme = html.classList.contains('dark') ? 'dark' : 'light';
+        localStorage.setItem('theme', theme);
+    });
 });
 
 // ========================================
